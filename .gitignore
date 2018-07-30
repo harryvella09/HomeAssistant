@@ -1,0 +1,5 @@
+*
+!*.yaml
+!scenes
+secrets.yaml
+known_devices.yaml

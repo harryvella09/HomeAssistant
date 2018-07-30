@@ -74,8 +74,26 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 
+mqtt:
+  broker: core-mosquitto
+  username: !secret mqtt_uname
+  password: !secret mqtt_password
+
+
 panel_iframe:
   configurator:
     title: Configurator
     icon: mdi:wrench
     url: !secret configurator_base_url
+
+
+## Device Tracker:
+device_tracker:
+  - platform: netgear
+    host: !secret router_ipadd
+    port: 80
+    url: http://routerlogin.com/
+    username: !secret router_uname
+    password: !secret router_passwd
+
+
